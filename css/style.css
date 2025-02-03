@@ -1,0 +1,195 @@
+body {
+  font-family: "Century Gothic", "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+/*Navigationsleiste + Heroimage*/
+      .et-hero-tabs {
+        /* The hero image */
+        
+          /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+          background-image: linear-gradient(rgba(209, 0, 0, 0.058), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+
+          /* Set a specific height */
+          height: 100vh;
+          display: flex;
+
+          /* Position and center the image to scale nicely on all screens */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          
+          
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          
+      }
+
+      .welcome
+      {
+        text-align: right;
+        position: absolute;
+        font-size: 16pt;
+        top: 50%;
+        left: 75%;
+        transform: translate(-25%);
+        color: white;
+      }
+      
+
+/*Schriften*/
+      h1 {
+        font-size: 2rem;
+        margin: 0;
+        letter-spacing: 1rem;
+        color: #fff;
+      }
+      h3 {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+        opacity: 0.6;
+        color: #fff;
+      }
+
+
+      .et-hero-tabs-container {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 70px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background: #6b1b1b;
+        z-index: 10;
+      }
+      .et-hero-tabs-container--top {
+        position: fixed;
+        top: 0;
+      }
+      .et-hero-tab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        color: #ffffff;
+
+        letter-spacing: 0.1rem;
+        transition: all 0.5s ease;
+        font-size: 0.8rem;
+      }
+      .et-hero-tab:hover {
+        color: white;
+        background: rgba(102, 177, 241, 0.8);
+        transition: all 0.5s ease;
+      }
+
+      .et-hero-tab-slider {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 6px;
+        background: #66B1F1;
+        transition: left 0.3s ease;
+      }
+
+     
+
+/*Knöpfe und Schaltflächen*/
+
+/*Skalierendes Bild*/
+      .container 
+      {
+        position: relative;
+        min-height: 500px;
+      }
+      .container img    
+      {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%; /* Skalierung relativ zum Container */
+        max-width: 1200; /* Begrenzung der maximalen Größe */
+        height: auto; /* Seitenverhältnis beibehalten */
+      }
+
+      .container-fluid
+      {
+        background-color: rgb(73, 73, 73);
+      }
+
+      .bg
+      {
+        background-color: black;
+      }
+
+
+/* #Progress
+================================================== */
+
+
+.progress-wrap {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	height: 75px;
+	width: 75px;
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	box-shadow: inset  0 0 0 2px rgba(255,255,255,0.2);
+	z-index: 10000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(15px);
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.progress-wrap.active-progress {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.progress-wrap::after {
+	position: absolute;
+	font-family: 'unicons';
+	
+  content: '\e84b';
+	text-align: center;
+	line-height: 75px;
+	font-size: 40pt;
+	color: #54fc00;
+	left: 0;
+	top: 0;
+	height: 75px;
+	width: 75px;
+	cursor: pointer;
+	display: block;
+	z-index: 1;
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.progress-wrap:hover::after {
+	opacity: 0;
+}
+
+.progress-wrap:hover::before {
+	opacity: 1;
+}
+.progress-wrap svg path { 
+	fill: none; 
+}
+.progress-wrap svg.progress-circle path {
+	stroke: #ff0000;
+	stroke-width: 4;
+	box-sizing:border-box;
+	-webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+
+
