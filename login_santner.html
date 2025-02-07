@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+:root 
+{
+  --bg-image: url("Santner_App/images/lockscreen.jpg");
+}
+
+
+
+body {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(0, 226, 94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Vollbildhöhe */
+}
+
+    .login-container {
+      text-align: center;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      border: 2px solid #fff;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Bitte Passwort eingeben</h2>
+    <input type="password" id="password" placeholder="Passwort" />
+    <br>
+    <button onclick="checkPassword()">Login</button>
+  </div>
+
+  <script>
+    // Definiere das Passwort
+    const correctPassword = "sunshine"; // Ersetze dies mit deinem gewünschten Passwort
+
+    // Funktion zur Passwortüberprüfung
+    function checkPassword() {
+      const enteredPassword = document.getElementById("password").value;
+
+      if (enteredPassword === correctPassword) {
+        // Weiterleitung zur home.html bei korrektem Passwort
+        window.location.href = "home.html";
+      } else {
+        alert("Falsches Passwort. Versuche es erneut.");
+      }
+    }
+  </script>
+
+</body>
+</html>

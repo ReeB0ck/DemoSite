@@ -1,80 +1,51 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <style>
-:root 
-{
-  --bg-image: url("Santner_App/images/lockscreen.jpg");
-}
-
-
-
-body {
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: rgb(0, 226, 94);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Vollbildhöhe */
-}
-
-    .login-container {
-      text-align: center;
-    }
-
-    input[type="password"] {
-      padding: 10px;
-      margin: 10px;
-      width: 200px;
-      border: 2px solid #fff;
-      background-color: #333;
-      color: white;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #444;
-      color: white;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Bootstrap-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+    <style>
+        body
+        {
+            background-color: rgb(28, 41, 5);
+            color: rgb(236, 236, 236);
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            align-items: center;
+            background-image: url(images/login.jpg);
+            height: 100vh; /* Vollbildhöhe */
+            display: flex;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
 
-  <div class="login-container">
-    <h2>Bitte Passwort eingeben</h2>
-    <input type="password" id="password" placeholder="Passwort" />
-    <br>
-    <button onclick="checkPassword()">Login</button>
-  </div>
+        a
+        {
+            color: rgb(238, 238, 238);
+        }
 
-  <script>
-    // Definiere das Passwort
-    const correctPassword = "sunshine"; // Ersetze dies mit deinem gewünschten Passwort
+        a :hover
+        {
+            color: rgb(182, 0, 0);
+            font-size: 16pt;
+        }
+    </style>
 
-    // Funktion zur Passwortüberprüfung
-    function checkPassword() {
-      const enteredPassword = document.getElementById("password").value;
+    <div class="container">
+        <h1>Verzeichnis aller Websites</h1>
+        <ol>
+            <a href="login_santner.html"><li>Santner Appartments</li></a>
+            <a href="login_santner"><li>Foto-genial</li></a>
+            <a href="login_santner"><li>High Five</li></a>
+            <a href="login_santner"><li>Südtiroler Tageszeitung</li></a>
+            <a href="login_santner"><li>creativiree</li></a>
+            <a href="login_santner"><li>Mir gehen die Ideen aus<</li></a>
+            <a href="login_santner"><li>Mir ist fad</li></a>
 
-      if (enteredPassword === correctPassword) {
-        // Weiterleitung zur home.html bei korrektem Passwort
-        window.location.href = "home.html";
-      } else {
-        alert("Falsches Passwort. Versuche es erneut.");
-      }
-    }
-  </script>
-
+        </ol>
+    </div>
 </body>
 </html>
