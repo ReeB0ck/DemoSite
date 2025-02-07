@@ -5,16 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <style>
-    body {
-      background-image:url("../Santner_App/images/lockscreen.jpg"); 
-      background-size: cover;
-      background-repeat: no-repeat;
-    
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh; /* Vollbildhöhe */
-    }
+:root {
+  --bg-image: url("../Santner_App/images/lockscreen.jpg");
+}
+
+body {
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Vollbildhöhe */
+}
 
     .login-container {
       text-align: center;
